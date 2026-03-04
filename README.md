@@ -46,7 +46,7 @@ gcc -o rtsp_client rtsp_client.c -lpthread
 
 #### 示例
 ```bash
-./rtsp_pusher test.mp4 rtsp://192.168.2.113:7554/inrico/test_stream
+./rtsp_pusher test.mp4 rtsp://192.168.2.113:7554/app/live
 ```
 
 #### 功能特点
@@ -72,10 +72,10 @@ gcc -o rtsp_client rtsp_client.c -lpthread
 #### 示例
 ```bash
 # 使用默认时长（30秒）
-./rtsp_client rtsp://192.168.2.113:7554/inrico/test_stream
+./rtsp_client rtsp://192.168.2.113:7554/app/live
 
 # 指定时长（60秒）
-./rtsp_client rtsp://192.168.2.113:7554/inrico/test_stream 60
+./rtsp_client rtsp://192.168.2.113:7554/app/live 60
 ```
 
 #### 功能特点
@@ -408,7 +408,7 @@ Session: <session_id>
 
 ```bash
 # 启动推流端
-./rtsp_pusher test.mp4 rtsp://192.168.2.113:7554/inrico/test_stream
+./rtsp_pusher test.mp4 rtsp://192.168.2.113:7554/app/live
 ```
 
 推流端会执行以下操作：
@@ -424,7 +424,7 @@ Session: <session_id>
 
 ```bash
 # 启动拉流端
-./rtsp_client rtsp://192.168.2.113:7554/inrico/test_stream 60
+./rtsp_client rtsp://192.168.2.113:7554/app/live 60
 ```
 
 拉流端会执行以下操作：
@@ -442,12 +442,12 @@ Session: <session_id>
 
 ```
 MP4 文件: test.mp4
-RTSP URL: rtsp://192.168.2.113:7554/inrico/test_stream
+RTSP URL: rtsp://192.168.2.113:7554/app/live
 SPS/PPS: Z2QAIKzZQLQW7ARAAAADAEAAAB4DxgxlgA==,aOviyyLA
-解析 RTSP URL: IP=192.168.2.113, 端口=7554, 路径=/inrico/test_stream
+解析 RTSP URL: IP=192.168.2.113, 端口=7554, 路径=/app/live
 已连接到服务器 192.168.2.113:7554
 发送 RTSP 请求:
-OPTIONS rtsp://192.168.2.113:7554/inrico/test_stream RTSP/1.0
+OPTIONS rtsp://192.168.2.113:7554/app/live RTSP/1.0
 ...
 接收 RTSP 响应:
 RTSP/1.0 200 OK
@@ -461,11 +461,11 @@ RTSP/1.0 200 OK
 ### 拉流端输出示例
 
 ```
-RTSP URL: rtsp://192.168.2.113:7554/inrico/test_stream
+RTSP URL: rtsp://192.168.2.113:7554/app/live
 拉流时长: 30 秒
 已连接到服务器 192.168.2.113:7554
 发送 RTSP 请求:
-OPTIONS rtsp://192.168.2.113:7554/inrico/test_stream RTSP/1.0
+OPTIONS rtsp://192.168.2.113:7554/app/live RTSP/1.0
 ...
 接收 RTSP 响应:
 RTSP/1.0 200 OK
