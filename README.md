@@ -15,8 +15,8 @@ RTSP push-pull streaming test is the learning code for the RTSP push-pull stream
 ### 方法一：使用编译脚本（推荐）
 
 ```bash
-chmod +x build_rtsp.sh
-./build_rtsp.sh
+chmod +x build.sh
+./build.sh
 ```
 
 ### 方法二：手动编译
